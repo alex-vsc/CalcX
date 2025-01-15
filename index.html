@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalcX Beta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Text Box for Version -->
+  <div class="text-box">CalcX V 2.2 (Beta)</div>
+
+  <!-- Calculator Container -->
+  <div class="calculator">
+    <!-- Display -->
+    <div class="display" id="display">0</div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <!-- Advanced Functions -->
+      <button class="button" onclick="calculateSin()">sin</button>
+      <button class="button" onclick="calculateCos()">cos</button>
+      <button class="button" onclick="calculateTan()">tan</button>
+      <button class="button" onclick="calculateLog()">log</button>
+      <button class="button" onclick="calculateLn()">ln</button>
+      <button class="button" onclick="appendToDisplay('Math.PI')">π</button>
+      <button class="button" onclick="appendToDisplay('Math.E')">e</button>
+      <button class="button" onclick="calculateFactorial()">!</button>
+
+      <!-- Separator Line -->
+      <div class="separator"></div>
+
+      <!-- Basic Operations -->
+      <button class="button" onclick="clearDisplay()">C</button>
+      <button class="button" onclick="clearEntry()">CE</button>
+      <button class="button" onclick="appendToDisplay('/')">/</button>
+      <button class="button" onclick="appendToDisplay('*')">*</button>
+      <button class="button" onclick="appendToDisplay('7')">7</button>
+      <button class="button" onclick="appendToDisplay('8')">8</button>
+      <button class="button" onclick="appendToDisplay('9')">9</button>
+      <button class="button" onclick="appendToDisplay('-')">-</button>
+      <button class="button" onclick="appendToDisplay('4')">4</button>
+      <button class="button" onclick="appendToDisplay('5')">5</button>
+      <button class="button" onclick="appendToDisplay('6')">6</button>
+      <button class="button" onclick="appendToDisplay('+')">+</button>
+      <button class="button" onclick="appendToDisplay('1')">1</button>
+      <button class="button" onclick="appendToDisplay('2')">2</button>
+      <button class="button" onclick="appendToDisplay('3')">3</button>
+      <button class="button" onclick="appendToDisplay('0')">0</button>
+      <button class="button" onclick="calculateSquareRoot()">√</button>
+      <button class="button" onclick="appendToDisplay('**')">^</button>
+      <button class="button" onclick="calculatePercentage()">%</button>
+      <button class="button" onclick="toggleSign()">±</button>
+      <button class="button" onclick="calculateResult()">=</button>
+
+      <!-- Memory Functions -->
+      <button class="button" onclick="memoryAdd()">M+</button>
+      <button class="button" onclick="memorySubtract()">M-</button>
+      <button class="button" onclick="memoryRecall()">MR</button>
+      <button class="button" onclick="memoryClear()">MC</button>
+
+      <!-- Toggle Dark Mode Button -->
+      <button class="button" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </div>
+
+  <!-- About Box -->
+  <textarea class="about-box" readonly>
+    Change Log:
+    V2.2.0 (Beta) Added Analog Clock to the upper right of the screen.
+    V2.1.3 Introduced the HUD Banner to the Embed.
+    V2.1.2 Added Realistic Screen, Fixed Padding.
+    V2.1.1 Introduced Dark Mode & Improved UI.
+    V2.1.0 Improved UI.
+    V1.0.0 Initial Release.
+  </textarea>
+
+  <!-- Moving Banner -->
+  <div class="banner">
+ <span class="banner-text">CalcX V2.1.2</span>
+    <span class="banner-text">Beta Pre-Release</span>
+    <span class="banner-text">Out Now!</span>
+  </div>
+
+ <!-- Digital Clock -->
+<div class="digital-clock">
+    <span id="hours">00</span>:
+    <span id="minutes">00</span>:
+    <span id="seconds">00</span>
+</div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
