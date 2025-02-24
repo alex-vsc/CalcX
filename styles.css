@@ -214,27 +214,38 @@ body.dark-mode .about-box {
     font-weight: bold;
     color: #333; /* Light mode text color */
     white-space: nowrap; /* Prevent text from wrapping */
-    animation: slideAndFade 10s linear infinite; /* Adjust animation duration as needed */
 }
 
-/* Dark Mode Styles for Banner */
-body.dark-mode .banner {
-    background-color: #1e1e1e; /* Dark mode background color */
+/* Individual Animations for Banner Text */
+.banner-text:nth-child(1) {
+    animation: slideAndFade1 10s linear infinite;
 }
 
-body.dark-mode .banner-text {
-    color: #ffffff; /* Dark mode text color */
+.banner-text:nth-child(2) {
+    animation: slideAndFade2 15s linear infinite;
+}
+
+.banner-text:nth-child(3) {
+    animation: slideAndFade3 20s linear infinite;
 }
 
 /* Keyframes for sliding and fading */
-@keyframes slideAndFade {
+@keyframes slideAndFade1 {
     0% {
         left: 100%; /* Start off-screen to the right */
         opacity: 1; /* Fully visible */
     }
-    50% {
+    20% {
         left: 0; /* Slide to the center */
         opacity: 1; /* Fully visible */
+    }
+    30% {
+        left: 0; /* Stay in the center */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        left: 0; /* Stay in the center */
+        opacity: 0; /* Fade out */
     }
     100% {
         left: -100%; /* Slide off-screen to the left */
@@ -242,54 +253,50 @@ body.dark-mode .banner-text {
     }
 }
 
-/* Repeat the banner text multiple times */
-.banner-text:nth-child(1) {
-    animation-delay: 0.5s;
+@keyframes slideAndFade2 {
+    0% {
+        left: 100%; /* Start off-screen to the right */
+        opacity: 0; /* Fade out */
+    }
+    20% {
+        left: 0; /* Slide to the center */
+        opacity: 1; /* Fully visible */
+    }
+    30% {
+        left: 0; /* Stay in the center */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        left: 0; /* Stay in the center */
+        opacity: 0; /* Fade out */
+    }
+    100% {
+        left: -100%; /* Slide off-screen to the left */
+        opacity: 0; /* Fade out */
+    }
 }
 
-.banner-text:nth-child(2) {
-    animation-delay: 1s;
-}
-
-.banner-text:nth-child(3) {
-    animation-delay: 1.5s;
-}
-
-.banner-text:nth-child(4) {
-    animation-delay: 2s;
-}
-
-.banner-text:nth-child(5) {
-    animation-delay: 2.5s;
-}
-
-.banner-text:nth-child(6) {
-    animation-delay: 3s;
-}
-
-/* Add multiple banner text elements */
-.banner-text:nth-child(1) {
-    content: "CalcX V2.1.2";
-}
-
-.banner-text:nth-child(2) {
-    content: "Beta Pre-Release";
-}
-
-.banner-text:nth-child(3) {
-    content: "Out Now!";
-}
-
-.banner-text:nth-child(4) {
-    content: "CalcX V2.1.2";
-}
-
-.banner-text:nth-child(5) {
-    content: "Beta Pre-Release";
-}
-
-.banner-text:nth-child(6) {
-    content: "Out Now!";
+@keyframes slideAndFade3 {
+    0% {
+        left: 100%; /* Start off-screen to the right */
+        opacity: 0; /* Fade out */
+    }
+    20% {
+        left: 0; /* Slide to the center */
+        opacity: 1; /* Fully visible */
+    }
+    30% {
+        left: 0; /* Stay in the center */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        left: 0; /* Stay in the center */
+        opacity: 0; /* Fade out */
+    }
+    100% {
+        left: -100%; /* Slide off-screen to the left */
+        opacity: 0; /* Fade out */
+    }
 }
 
 /* Digital Clock Styles */
@@ -305,4 +312,17 @@ body.dark-mode .banner-text {
 
 .digital-clock span {
     margin: 0 5px;
+}
+
+/* History Display Styles */
+.history-display {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 1rem;
+    color: #333;
 }

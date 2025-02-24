@@ -32,6 +32,7 @@ function clearEntry() {
 function calculateResult() {
     try {
         display.textContent = eval(display.textContent);
+        addToHistory(display.textContent); // Add result to history
     } catch (error) {
         display.textContent = "Error";
     }
@@ -128,6 +129,7 @@ function loadDarkModePreference() {
         document.body.classList.add("dark-mode");
     }
 }
+
 // Get the digital clock elements
 const hoursElement = document.getElementById('hours');
 const minutesElement = document.getElementById('minutes');
@@ -150,5 +152,21 @@ setInterval(() => {
     minutesElement.textContent = minutes;
     secondsElement.textContent = seconds;
 }, 1000);
+
 // Load dark mode preference when the page loads
 window.onload = loadDarkModePreference;
+
+// History Feature
+let history = [];
+
+// Function to add result to history
+function addToHistory(result) {
+    history.push(result);
+    updateHistoryDisplay();
+}
+
+// Function to update the history display
+function updateHistoryDisplay() {
+    const historyDisplay = document.getElementById('history');
+    historyDisplay.innerHTML = history.join('<br>'); // Display history
+}
